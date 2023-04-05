@@ -1,19 +1,24 @@
 <a name="readme-top"></a>
 
+This README would normally document whatever steps are necessary to get the
+application up and running.
 <div align="center">
-  <img src="database.png" alt="logo" width="280"  height="auto" />
-  <br/><br/>
-
-  <h2><b>BLOG APP</b></h2>
-
+  <img src="./blog.png" alt="logo" width="256"  height="auto" />
   <br/>
 
+Things you may want to cover:
+  <h3><b>Blog App</b></h3>
+
+* Ruby version
 </div>
 
+* System dependencies
 <!-- TABLE OF CONTENTS -->
 
+* Configuration
 # 📗 Table of Contents
 
+* Database creation
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
@@ -29,16 +34,27 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
+* Database initialization
 # 📖 Blog App <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-**Blog App** is a web app that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
+* How to run the test suite
+**Blog App** The Blog app is classic example of a blog website. A fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
+* Services (job queues, cache servers, search engines, etc.)
 ## 🛠 Built With <a name="built-with"></a>
 
+* Deployment instructions
 ### Tech Stack <a name="tech-stack"></a>
 
+* ...
 This project was implemented using:
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+  </ul>
+</details>
 
 <details>
   <summary>Server</summary>
@@ -76,7 +92,7 @@ Optionally, in order to modify this project you should to have installed:
 
 - [ ] Git.
 
-- [ ] Code editor like: [Visual Studio code](https://code.visualstudio.com/), [Sublime text](https://www.sublimetext.com/) or others...
+- [ ] Code editor like: [Visual Studio code](https://code.visualstudio.com/), or others...
 
 ### Setup
 
@@ -90,6 +106,8 @@ git clone https://github.com/cilfonegabriel/App-Blog.git
 
 - Access the cloned directory with:
 
+```console
+cd Blog-App
 ```
 
 - Open it with your favorite code editor or with the live server
@@ -101,11 +119,10 @@ To run the project, execute the following command in the project directory:
 ```console
 rails server
 ```
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 👤 **Gabriel Cilfone**
 
@@ -141,8 +158,6 @@ Give a ⭐️ if you like this project!
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 - Hat tip to anyone whose code was used.
-- Thanks for all the curated content that was provided to us.
-- Thanks to my learning and coding partners for all their support.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,4 +165,4 @@ Give a ⭐️ if you like this project!
 
 This project is [MIT](./LICENSE) licensed.
 
-<p align="right">(<a href="#readme-top">back to top</a>)<
+<p align="right">(<a href="#readme-top">back to top</a>)
