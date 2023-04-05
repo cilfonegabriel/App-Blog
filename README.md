@@ -1,24 +1,8 @@
 <a name="readme-top"></a>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-<div align="center">
-  <img src="./blog.png" alt="logo" width="256"  height="auto" />
-  <br/>
-
-Things you may want to cover:
-  <h3><b>Blog App</b></h3>
-
-* Ruby version
-</div>
-
-* System dependencies
 <!-- TABLE OF CONTENTS -->
 
-* Configuration
 # 📗 Table of Contents
-
-* Database creation
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
@@ -27,6 +11,7 @@ Things you may want to cover:
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Usage](#usage)
+  - [install](#install)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -34,30 +19,19 @@ Things you may want to cover:
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-* Database initialization
 # 📖 Blog App <a name="about-project"></a>
 
-* How to run the test suite
 **Blog App** The Blog app is classic example of a blog website. A fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 * Services (job queues, cache servers, search engines, etc.)
 ## 🛠 Built With <a name="built-with"></a>
 
-* Deployment instructions
 ### Tech Stack <a name="tech-stack"></a>
 
-* ...
 This project was implemented using:
 
 <details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
+  <summary>Framework</summary>
   <ul>
     <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
   </ul>
@@ -86,6 +60,10 @@ To get a local copy up and running, follow these steps:
 
 In order to run this project you need to have installed:
 
+- [ ] install ruby
+
+- [ ] install postgresql
+
 - [ ] You’ll need to have Ruby and Rails on your machine.
 
 Optionally, in order to modify this project you should to have installed:
@@ -112,6 +90,15 @@ cd Blog-App
 
 - Open it with your favorite code editor or with the live server
 
+### Install
+
+To run the project, execute the following command in the project directory:
+
+```console
+    bundle install
+    rails db:create
+    rails db:migrate
+```
 ### Usage
 
 To run the project, execute the following command in the project directory:
@@ -157,7 +144,7 @@ Give a ⭐️ if you like this project!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- Hat tip to anyone whose code was used.
+- Microverse 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
