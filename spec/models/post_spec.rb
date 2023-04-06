@@ -18,8 +18,8 @@ RSpec.describe Post, type: :model do
   end
 
   it 'There can be no more than 250 characters in the title' do
-    long_title = 'Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio\
-    urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper\
+    long_title = 'Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio\ 
+    urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper\ 
     pulvinar. Vestibulum fermentum tortor '
     subject.title = long_title
     expect(subject).to_not be_valid
