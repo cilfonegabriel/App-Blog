@@ -1,17 +1,26 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  user1 = User.new(name: 'Tom', photo: 'my_photo.com', bio: 'Bio message')
-  subject { Post.new(author: user1, title: 'post title', text: 'posts text') }
+  subject do
+    Post.new(
+      author: User.new(name: 'Tom', photo: 'my_photo.com', bio: 'Bio message'),
+      title: 'post title',
+      text: 'post text',
+      comments_counter: 0,
+      likes_counter: 0
+    )
+  end
   before { subject.save }
 
-  it 'can not miss the title' do
+  it 'title should be present' do
     subject.title = nil
     expect(subject).to_not be_valid
   end
 
   it 'There can be no more than 250 characters in the title' do
-    long_title = 'Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor '
+    long_title = 'Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio\
+    urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper\
+    pulvinar. Vestibulum fermentum tortor '
     subject.title = long_title
     expect(subject).to_not be_valid
   end
@@ -24,5 +33,17 @@ RSpec.describe Post, type: :model do
   it 'likes_counter should be positive' do
     subject.likes_counter = -1
     expect(subject).to_not be_valid
+  end
+
+  it 'shows at most 5 recent comments' do
+    subject.comments = [
+      Comment.new(post: subject, author: subject.author, text: 'Hi Tom!'),
+      Comment.new(post: subject, author: subject.author, text: 'Hi Tom!'),
+      Comment.new(post: subject, author: subject.author, text: 'Hi Tom!'),
+      Comment.new(post: subject, author: subject.author, text: 'Hi Tom!'),
+      Comment.new(post: subject, author: subject.author, text: 'Hi Tom!'),
+      Comment.new(post: subject, author: subject.author, text: 'Hi Tom!')
+    ]
+    expect(subject.recent_comments.length).to eql(5)
   end
 end
