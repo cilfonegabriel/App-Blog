@@ -18,9 +18,10 @@ RSpec.describe Post, type: :model do
   end
 
   it 'title should not exceed 250 characters' do
-    long_title = 'Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio 
-      urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper 
-      pulvinar. Vestibulum fermentum tortor '
+    long_title = 'Now we will create it blocks for each behaviour were
+    expecting in the Movies model. So remember to be as clear as possible
+    when describe your tests because you need to be a good communicator and
+    make yourself understandable not only with computers but also with people.'
     subject.title = long_title
     expect(subject).to_not be_valid
   end
