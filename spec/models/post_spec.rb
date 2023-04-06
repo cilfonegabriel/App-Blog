@@ -18,7 +18,7 @@ RSpec.describe Post, type: :model do
   end
 
   it 'There can be no more than 250 characters in the title' do
-    long_title = = 'Now we will create it blocks for each behaviour were
+    long_title = 'Now we will create it blocks for each behaviour were
     expecting in the Movies model. So remember to be as clear as possible
     when describe your tests because you need to be a good communicator and
     make yourself understandable not only with computers but also with people.'
