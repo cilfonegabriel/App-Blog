@@ -1,1 +1,8 @@
-<h1>Users#index</h1>
+<h1>Users</h1>
+<ul>
+  <% @users.each do |user| %>
+    <li> 
+    <%= link_to(render('user_card', user: user), user_path(user)) %>
+    </li>
+  <% end %>
+</ul>

@@ -1,1 +1,15 @@
-<h1>Posts#show</h1>
+<div class="posts-container post-and-comments">
+  <div class="full-post">
+    <h4>Post #<%= @post.id %> by <%= @user.name %></h4>
+    <p class='post-counters'>Comments <%= @post.comments_counter %>, Likes <%= @post.likes_counter %></p>
+    <p class='post-text'><%= @post.text %></p>
+  </div>
+  <% if @post.comments.length.positive? %>
+    <div class="comments">
+        <% @post.comments.each do |comment| %>
+          <p><%= comment.author.name %>: <%= comment.text %></p>
+        <% end %>
+    </div>
+  <% end %>
+
+</div>
