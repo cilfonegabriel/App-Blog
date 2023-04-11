@@ -1,1 +1,22 @@
 <h1>Posts#index</h1>
+<%= render('users/user_card', user: @user) %>
+<div class="posts-container">
+  <% @posts.each do |post| %>
+    <div class="post-and-comments">
+      <%= link_to user_post_path(@user, post) do %>
+        <div class="post">
+          <h4>Post #<%= post.id %></h4>
+          <p><%= post.text %></p>
+        </div>
+      <% end %>
+      <% if post.comments.length.positive? %>
+        <div class="comments">
+            <% post.recent_comments.each do |comment| %>
+              <p><%= comment.text %></p>
+            <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <button>Pagination</button>
+</div>
