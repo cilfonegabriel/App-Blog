@@ -13,90 +13,90 @@
  *= require_tree .
  *= require_self
  */
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  a,
-  a:visited {
-    text-decoration: none;
-    color: black;
-  }
-  
-  button {
-    width: fit-content;
-    padding: 0.1rem 0.2rem;
-    margin: auto;
-  }
-  
-  .user-card {
-    display: flex;
-    column-gap: 1rem;
-    height: 4rem;
-    margin: 1rem 2rem;
-  }
-  
-  .user-card > * {
-    border: 1px solid black;
-  }
-  
-  .user-card > img {
-    width: 4rem;
-    aspect-ratio: 1/1;
-  }
-  
-  .user-card > div {
-    flex: 5;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-  
-  .post-count {
-    align-self: flex-end;
-    margin: 0;
-  }
-  
-  .user-info,
-  .posts-container {
-    padding: 0 2rem;
-    display: grid;
-    row-gap: 1rem;
-  }
-  
-  .post {
-    border: 1px solid black;
-  }
-  
-  .comments {
-    border: 1px solid black;
-  }
-  
-  .post-and-comments {
-    margin-top: 3rem;
-    display: grid;
-    row-gap: 0.2rem;
-  }
-  
-  .post-and-comments > * {
-    padding: 0 0.2rem;
-  }
-  
-  .full-post {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border: 1px solid black;
-  }
-  
-  .post-counters {
-    text-align: right;
-    font-size: 0.6rem;
-    vertical-align: bottom;
-    padding-top: 0.5rem;
-  }
-  
-  .post-text {
-    grid-column: 1/-1;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  width: fit-content;
+  padding: 0.1rem 0.2rem;
+  margin: auto;
+}
+
+.user-card {
+  display: flex;
+  column-gap: 1rem;
+  height: 4rem;
+  margin: 1rem 2rem;
+}
+
+.user-card > * {
+  border: 1px solid black;
+}
+
+.user-card > img {
+  width: 4rem;
+  aspect-ratio: 1/1;
+}
+
+.user-card > div {
+  flex: 5;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.post-count {
+  align-self: flex-end;
+  margin: 0;
+}
+
+.user-info,
+.posts-container {
+  padding: 0 2rem;
+  display: grid;
+  row-gap: 1rem;
+}
+
+.post {
+  border: 1px solid black;
+}
+
+.comments {
+  border: 1px solid black;
+}
+
+.post-and-comments {
+  margin-top: 3rem;
+  display: grid;
+  row-gap: 0.2rem;
+}
+
+.post-and-comments > * {
+  padding: 0 0.2rem;
+}
+
+.full-post {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid black;
+}
+
+.post-counters {
+  text-align: right;
+  font-size: 0.6rem;
+  vertical-align: bottom;
+  padding-top: 0.5rem;
+}
+
+.post-text {
+  grid-column: 1/-1;
+}
