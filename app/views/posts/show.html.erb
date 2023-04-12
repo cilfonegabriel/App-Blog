@@ -4,6 +4,9 @@
     <p class='post-counters'>Comments <%= @post.comments_counter %>, Likes <%= @post.likes_counter %></p>
     <p class='post-text'><%= @post.text %></p>
   </div>
+  <%= link_to new_user_post_comment_path(@user, @post) do %>
+    <button>New Comment</button>
+  <% end %>
   <% if @post.comments.length.positive? %>
     <div class="comments">
         <% @post.comments.each do |comment| %>

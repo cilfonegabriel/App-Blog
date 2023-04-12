@@ -11,7 +11,7 @@
       <% if post.comments.length.positive? %>
         <div class="comments">
             <% post.recent_comments.each do |comment| %>
-              <p><%= comment.text %></p>
+              <p><%= comment.text.truncate(80, separator: ' ' ) %></p>
             <% end %>
         </div>
       <% end %>
