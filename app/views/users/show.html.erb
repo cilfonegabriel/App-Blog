@@ -1,11 +1,13 @@
 <%= render('user_card', user: @user) %>
 <div class="user-info">
   <p><span>Bio: <br></span><%= @user.bio %></p>
-  <% @user.recent_posts.each do |post| %>
-    <div class="post">
-      <h4>Post #<%= post.id %></h4>
-      <p><%= post.text %></p>
-    </div>
+  <% @user.recent_posts.each do |post|%>
+    <%= link_to user_post_path(@user, post) do %>
+      <div class="post">
+        <h4>Post #<%= post.id %></h4>
+        <p><%= post.text.truncate(100, separator: ' ') %></p>
+      </div>
+    <% end %>
   <% end %>
   <button><%= link_to('See all posts', user_posts_path(@user)) %></button>
 </div>
