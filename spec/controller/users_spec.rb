@@ -6,10 +6,10 @@ RSpec.describe 'Users', type: :request do
       photo: 'https://unsplash.com/photos/Hekapoo',
       bio: 'User 1 bio',
       posts_counter: 0
-      )
-    end
+    )
+  end
 
-    describe 'GET /index' do
+  describe 'GET /index' do
     it 'returns http success' do
       get users_path
       expect(response).to have_http_status(:success)
