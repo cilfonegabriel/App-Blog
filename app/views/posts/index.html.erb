@@ -1,14 +1,14 @@
 <%= render('users/user_card', user: @user) %>
 <%= link_to new_user_post_path() do %>
-    <button>New Post</button>
-  <% end %>
+  <button>New Post</button>
+<% end %>
 <div class="posts-container">
   <% @posts.each do |post| %>
     <div class="post-and-comments">
       <%= link_to user_post_path(@user, post) do %>
         <div class="post">
-        <h4>Post #<%= post.id %> - <%= post.title %> comments: <%= post.comments_counter %>, likes: <%= post.likes_counter %></h4>
-        <p><%= post.text %></p>
+          <h4>Post <%= post.id %> - <%= post.title %> comments: <%= post.comments_counter %>, likes: <%= post.likes_counter %></h4>
+          <p><%= post.text %></p>
         </div>
       <% end %>
       <% if post.comments.length.positive? %>
