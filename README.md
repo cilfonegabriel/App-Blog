@@ -10,6 +10,7 @@
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
+  - [Test](#test)
   - [Usage](#usage)
   - [install](#install)
 - [👥 Authors](#authors)
@@ -99,6 +100,20 @@ To run the project, execute the following command in the project directory:
     rails db:create
     rails db:migrate
 ```
+
+### Tests
+
+To run the tests run the following commands:
+
+Install gems
+```ruby
+  bundle install
+```
+Run tests
+```ruby
+  rspec spec
+```
+
 ### Usage
 
 To run the project, execute the following command in the project directory:

@@ -1,25 +1,45 @@
 require 'rails_helper'
+RSpec.describe 'Posts', type: :request do
+  before(:each) do
+    @user1 = User.create(
+      name: 'User 1',
+      photo: 'https://unsplash.com/photos/Hekapoo',
+      bio: 'User 1 bio',
+      posts_counter: 0
+    )
+  end
 
-RSpec.describe PostsController, type: :request do
-  describe 'Get id' do
-    it 'returns a successful response' do
-      get '/users/:id/posts/:id/'
-      expect(response).to be_successful
+  describe 'GET /index' do
+    it 'returns http success' do
+      get users_path
+      expect(response).to have_http_status(:success)
     end
 
-    it 'renders template index' do
+    it 'returns render index template' do
       get users_path
       expect(response).to render_template(:index)
     end
 
-    it 'renders the show template' do
-      get '/users/:id/posts/:id'
+    it 'body includes correct placeholder text' do
+      get user_path(@user1)
+      expect(response.body).to include(@user1.name)
+    end
+  end
+
+  describe 'GET /show' do
+    it 'returns http success' do
+      get users_path
+      expect(response).to have_http_status(:success)
+    end
+
+    it 'returns render show template' do
+      get user_path(@user1)
       expect(response).to render_template(:show)
     end
 
-    it ' includes the correct placeholder text in the response body' do
-      get '/users/:id/posts'
-      expect(response.body).to include('Posts#index')
+    it 'body includes correct placeholder text' do
+      get user_path(@user1)
+      expect(response.body).to include(@user1.name)
     end
   end
 end
