@@ -5,6 +5,8 @@ ruby '3.1.3'
 
 gem 'devise'
 
+gem 'letter_opener', group: :development
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
 
@@ -46,6 +48,9 @@ gem 'bootsnap', require: false
 
 # Use Sass to process CSS
 # gem "sassc-rails"
+
+# Gem for permission
+gem 'cancancan'
 
 # Use tailwind
 gem 'tailwindcss-rails'
