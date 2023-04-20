@@ -19,6 +19,11 @@
         <div class="comments">
             <% post.recent_comments.each do |comment| %>
               <p><%= comment.text.truncate(80, separator: ' ' ) %></p>
+              <%if can?  :destroy, comment %>
+              <%= link_to "Delete Comment", user_post_comment_path(comment.author_id, comment.post_id, comment),
+               data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }
+               %>
+            <% end %>
             <% end %>
         </div>
       <% end %>
