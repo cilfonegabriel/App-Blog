@@ -49,7 +49,7 @@ gem 'bootsnap', require: false
 # Use Sass to process CSS
 # gem "sassc-rails"
 
-#Gem for permission
+# Gem for permission
 gem 'cancancan'
 
 # Use tailwind
@@ -84,5 +84,3 @@ group :test do
 end
 
 gem 'pry-rails'
-
-  

@@ -34,6 +34,7 @@ class PostsController < ApplicationController
       format.html { redirect_to user_posts_path(current_user), notice: 'Post was successfully removed.' }
     end
   end
+
   private
 
   def post_params
