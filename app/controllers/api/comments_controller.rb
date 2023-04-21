@@ -5,10 +5,6 @@ class Api::CommentsController < ApplicationController
       @post = Post.find(request.params['post_id'])
       render json: @post.comments.all
     end
-  
-    def as_json(options = {})
-      super({ only: %i[text author_id post_id] }.merge(options))
-    end
 
     def create
       comment_params = params.require(:comment).permit(:author_id, :post_id, :text)
