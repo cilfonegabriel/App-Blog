@@ -17,4 +17,10 @@ class Post < ApplicationRecord
   def update_post_counter
     author.update(posts_counter: author.posts.count)
   end
+
+     # Option 2: Working with the default #as_json method
+  def as_json(options={})
+    super({ only: %i[title text] }.merge(options))
+  end
+ 
 end
